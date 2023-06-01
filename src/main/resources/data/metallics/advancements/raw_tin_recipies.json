@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "metallics:raw_tin"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "metallics:blasting_tin_ingot",
+      "metallics:smelting_tin_ingot",
+      "metallics:raw_tin_block"
+    ]
+  }
+}

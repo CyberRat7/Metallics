@@ -1,0 +1,65 @@
+{
+  "display": {
+    "icon": {
+      "item": "metallics:canned_melon"
+    },
+    "title": {
+      "translate": "advancements.the_whole_canned_collection.title"
+    },
+    "description": {
+      "translate": "advancements.the_whole_canned_collection.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "metallics:shut_your_can",
+  "criteria": {
+    "canned_carrot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "metallics:canned_carrot"
+          ]
+        }
+      }
+    },
+    "canned_melon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "metallics:canned_melon"
+          ]
+        }
+      }
+    },
+    "canned_beetroot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "metallics:canned_beetroot"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "canned_carrot"
+    ],
+    [
+      "canned_melon"
+    ],
+    [
+      "canned_beetroot"
+    ]
+  ],
+  "rewards": {
+    "experience": 10
+  }
+}
+
