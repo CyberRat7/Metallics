@@ -10,8 +10,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class MetallicsItems {
-
-
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Metallics.MOD_ID);
 
     public static final RegistryObject<Item> TIN_CAN = ITEMS.register("tin_can",
