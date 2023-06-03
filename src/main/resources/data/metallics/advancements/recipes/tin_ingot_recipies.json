@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "metallics:tin_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "metallics:bronze_ingot",
+      "metallics:tin_nugget",
+      "metallics:tin_glass",
+      "metallics:tin_block"
+    ]
+  }
+}

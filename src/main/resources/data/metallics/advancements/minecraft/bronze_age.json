@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "metallics:bronze_plated_helmet"
+    },
+    "title": {
+      "translate": "advancements.bronze_age.title"
+    },
+    "description": {
+      "translate": "advancements.bronze_age.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "minecraft:story/obtain_armor",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "metallics:bronze_plated_boots",
+              "metallics:bronze_plated_leggings",
+              "metallics:bronze_plated_chestplate",
+              "metallics:bronze_plated_helmet"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+
+    ]
+  }
+}

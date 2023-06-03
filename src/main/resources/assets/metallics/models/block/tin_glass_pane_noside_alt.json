@@ -1,0 +1,7 @@
+{
+  "parent": "metallics:block/template_tin_glass_pane_noside_alt",
+  "textures": {
+    "pane": "metallics:block/tin_glass"
+  },
+  "render_type": "translucent"
+}

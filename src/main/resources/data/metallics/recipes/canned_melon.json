@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "metallics:tin_can"
+    }
+  ],
+  "result": {
+    "item": "metallics:canned_melon"
+  }
+}

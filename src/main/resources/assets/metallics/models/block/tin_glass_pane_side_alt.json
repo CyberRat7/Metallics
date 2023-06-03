@@ -1,0 +1,8 @@
+{
+  "parent": "metallics:block/template_tin_glass_pane_side_alt",
+  "textures": {
+    "edge": "metallics:block/tin_glass_pane_top",
+    "pane": "metallics:block/tin_glass"
+  },
+  "render_type": "translucent"
+}

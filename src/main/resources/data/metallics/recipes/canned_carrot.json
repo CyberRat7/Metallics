@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "metallics:tin_can"
+    }
+  ],
+  "result": {
+    "item": "metallics:canned_carrot"
+  }
+}

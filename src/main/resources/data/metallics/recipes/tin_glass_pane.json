@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "metallics:tin_glass"
+    }
+  },
+  "result": {
+    "item": "metallics:tin_glass_pane",
+    "count": 16
+  }
+}

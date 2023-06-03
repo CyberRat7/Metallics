@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "metallics:tin_nugget"
+    },
+    {
+      "item": "metallics:tin_nugget"
+    },
+    {
+      "item": "metallics:tin_nugget"
+    }
+  ],
+  "result": {
+    "item": "metallics:tin_can"
+  }
+}

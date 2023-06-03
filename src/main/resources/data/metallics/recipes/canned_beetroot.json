@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "metallics:tin_can"
+    }
+  ],
+  "result": {
+    "item": "metallics:canned_beetroot"
+  }
+}

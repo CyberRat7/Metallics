@@ -1,0 +1,40 @@
+{
+  "item.metallics.tin_can": "Tin Can",
+  "item.metallics.crushed_tin_can": "Crushed Tin Can",
+
+  "item.metallics.raw_tin": "Raw Tin",
+  "item.metallics.tin_ingot": "Tin Ingot",
+  "item.metallics.tin_nugget": "Tin Nugget",
+
+  "item.metallics.bronze_ingot": "Bronze Ingot",
+  "item.metallics.bronze_plated_helmet": "Bronze Plated Iron Helmet",
+  "item.metallics.bronze_plated_boots": "Bronze Plated Iron Boots",
+  "item.metallics.bronze_plated_leggings": "Bronze Plated Iron Leggings",
+  "item.metallics.bronze_plated_chestplate": "Bronze Plated Iron Chestplate",
+
+  "item.metallics.bronze_plated_axe": "Bronze Plated Iron Axe",
+  "item.metallics.bronze_plated_sword": "Bronze Plated Iron Sword",
+  "item.metallics.bronze_plated_hoe": "Bronze Plated Iron Hoe",
+  "item.metallics.bronze_plated_shovel": "Bronze Plated Iron Shovel",
+  "item.metallics.bronze_plated_pickaxe": "Bronze Plated Iron Pickaxe",
+
+  "block.metallics.tin_block": "Block of Tin",
+  "block.metallics.tin_glass": "Tin Enforced Glass",
+  "block.metallics.tin_glass_pane": "Tin Enforced Glass Pane",
+  "block.metallics.raw_tin_block": "Raw Tin Block",
+  "block.metallics.tin_ore": "Tin Ore",
+  "block.metallics.deepslate_tin_ore": "Deepslate Tin Ore",
+
+  "item.metallics.canned_carrot": "Canned Carrot",
+  "item.metallics.canned_beetroot": "Canned Beetroot",
+  "item.metallics.canned_melon": "Canned Melon",
+
+  "advancements.bronze_age.title": "Bronze Age",
+  "advancements.bronze_age.description": "Upgrade your iron armor with bronze",
+  "advancements.shut_your_can.title": "Shut Your Can!",
+  "advancements.shut_your_can.description": "Obtain a canned food item"
+
+
+
+
+}
