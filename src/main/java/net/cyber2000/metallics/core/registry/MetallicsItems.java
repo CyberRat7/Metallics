@@ -11,8 +11,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
 public class MetallicsItems {
+
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Metallics.MOD_ID);
 
     public static final RegistryObject<Item> TIN_CAN = ItemBuilder.createDefaultItem("tin_can");
@@ -22,9 +22,9 @@ public class MetallicsItems {
     public static final RegistryObject<Item> CRUSHED_TIN_CAN = ItemBuilder.createDefaultItem("crushed_tin_can");
     public static final RegistryObject<Item> BRONZE_INGOT = ItemBuilder.createDefaultItem("bronze_ingot");
 
-    public static final RegistryObject<Item> CANNED_CARROT = FoodBuilder.createDefaultFoodItem("canned_carrot", 8, 14f);
-    public static final RegistryObject<Item> CANNED_BEETROOT = FoodBuilder.createDefaultFoodItem("canned_beetroot", 6, 14f);
-    public static final RegistryObject<Item> CANNED_MELON = FoodBuilder.createDefaultFoodItem("canned_melon", 6, 14f);
+    public static final RegistryObject<Item> CANNED_CARROT = FoodBuilder.createDefaultFoodItem("canned_carrot", 8, 1f);
+    public static final RegistryObject<Item> CANNED_BEETROOT = FoodBuilder.createDefaultFoodItem("canned_beetroot", 8, 1f);
+    public static final RegistryObject<Item> CANNED_MELON = FoodBuilder.createDefaultFoodItem("canned_melon", 8, 1f);
 
     public static final RegistryObject<Item> BRONZE_PLATED_SWORD = ToolBuilder.createSwordItem("bronze_plated_sword", MetallicsTiers.BRONZE, 3, -2.2F);
     public static final RegistryObject<Item> BRONZE_PLATED_AXE = ToolBuilder.createAxeItem("bronze_plated_axe", MetallicsTiers.BRONZE, 6.0F, -2.8F);
