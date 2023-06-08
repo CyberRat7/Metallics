@@ -2,6 +2,7 @@ package net.cyber2000.metallics;
 
 import com.mojang.logging.LogUtils;
 import net.cyber2000.metallics.core.registry.MetallicsBlocks;
+import net.cyber2000.metallics.core.registry.MetallicsEffects;
 import net.cyber2000.metallics.core.registry.MetallicsItems;
 import net.cyber2000.metallics.core.util.builder.block.BlockBuilder;
 import net.cyber2000.metallics.core.util.builder.item.ItemBuilder;
@@ -25,6 +26,7 @@ public class Metallics {
     public Metallics() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        MetallicsEffects.register(modEventBus);
         MetallicsItems.register(modEventBus);
         MetallicsBlocks.register(modEventBus);
 
