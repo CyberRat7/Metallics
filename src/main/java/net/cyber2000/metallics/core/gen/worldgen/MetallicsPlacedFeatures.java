@@ -29,7 +29,7 @@ public class MetallicsPlacedFeatures {
         //edit the second and third numbers to choose between what y levels the ore can spawn
 
 register(context, TIN_ORE_PLACED_KEY, configuredFeatures.getOrThrow(MetallicsConfiguredFeatures.TIN_ORE_KEY),
-        MetallicsOrePlacement.commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(80))));
+        MetallicsOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.absolute(10), VerticalAnchor.absolute(80))));
 
         register(context, DEEPSLATE_TIN_ORE_PLACED_KEY, configuredFeatures.getOrThrow(MetallicsConfiguredFeatures.DEEPSLATE_TIN_ORE_KEY),
                 MetallicsOrePlacement.commonOrePlacement(9, HeightRangePlacement.triangle(VerticalAnchor.absolute(-5), VerticalAnchor.absolute(75))));
