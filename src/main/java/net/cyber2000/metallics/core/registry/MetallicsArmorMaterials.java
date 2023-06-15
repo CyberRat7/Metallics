@@ -24,7 +24,7 @@ public enum MetallicsArmorMaterials implements ArmorMaterial {
         p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266655_.put(ArmorItem.Type.HELMET, 3);
-    }), 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> {
+    }), 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.05F, () -> {
         return Ingredient.of(MetallicsItems.BRONZE_INGOT.get());
     });
 
