@@ -24,7 +24,13 @@
               "metallics:bronze_plated_boots",
               "metallics:bronze_plated_leggings",
               "metallics:bronze_plated_chestplate",
+              "metallics:bronze_plated_axe",
+              "metallics:bronze_plated_sword",
+              "metallics:bronze_plated_shovel",
+              "metallics:bronze_plated_hoe",
+              "metallics:bronze_plated_pickaxe",
               "metallics:bronze_plated_helmet"
+
             ]
           }
         ]
