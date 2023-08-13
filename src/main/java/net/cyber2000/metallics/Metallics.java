@@ -2,11 +2,11 @@ package net.cyber2000.metallics;
 
 import com.mojang.logging.LogUtils;
 import net.cyber2000.metallics.core.registry.MetallicsBlocks;
+import net.cyber2000.metallics.core.registry.MetallicsCreativeTabs;
 import net.cyber2000.metallics.core.registry.MetallicsItems;
-import net.cyber2000.metallics.core.util.helper.CreativeModeTabHelper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,12 +23,11 @@ public class Metallics {
     public Metallics() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
         MetallicsItems.register(modEventBus);
         MetallicsBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::addCreative); // Register the item to a creative tab
+        modEventBus.addListener(this::addCreative);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -36,12 +35,8 @@ public class Metallics {
 
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        CreativeModeTabHelper tabHelper = new CreativeModeTabHelper(event);
-        tabHelper.addToIngredientsTab();
-        tabHelper.addToCombatTab();
-        tabHelper.addToBuildingBlocksTab();
-        tabHelper.addToFoodAndDrinksTab();
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        MetallicsCreativeTabs.init(event);
     }
 
 
