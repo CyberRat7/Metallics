@@ -2,57 +2,64 @@ package net.cyber2000.metallics.core.util.helper;
 
 import net.cyber2000.metallics.core.registry.MetallicsBlocks;
 import net.cyber2000.metallics.core.registry.MetallicsItems;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+
+import java.util.function.Supplier;
 
 public class CreativeModeTabHelper {
-    private final CreativeModeTabEvent.BuildContents event;
+    private final BuildCreativeModeTabContentsEvent event;
 
-    public CreativeModeTabHelper(CreativeModeTabEvent.BuildContents event) {
+    public CreativeModeTabHelper(BuildCreativeModeTabContentsEvent event) {
         this.event = event;
     }
 
-    public void addToIngredientsTab() {
-        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(MetallicsItems.TIN_CAN);
-            event.accept(MetallicsItems.CRUSHED_TIN_CAN);
-            event.accept(MetallicsItems.RAW_TIN);
-            event.accept(MetallicsItems.TIN_INGOT);
-            event.accept(MetallicsItems.BRONZE_INGOT);
-            event.accept(MetallicsItems.TIN_NUGGET);
+    public void addToBuildingBlocksTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.BUILDING_BLOCKS, item);
+    }
+
+    public void addToColoredBlocksTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.COLORED_BLOCKS, item);
+    }
+
+    public void addToNaturalBlocksTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.NATURAL_BLOCKS, item);
+    }
+
+    public void addToFunctionalBlocksTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.FUNCTIONAL_BLOCKS, item);
+    }
+
+    public void addToRedstoneBlocksTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.REDSTONE_BLOCKS, item);
+    }
+
+    public void addToTools(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.TOOLS_AND_UTILITIES, item);
+    }
+
+    public void addToCombatTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.COMBAT, item);
+    }
+
+    public void addToFoodAndDrinksTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.FOOD_AND_DRINKS, item);
+    }
+
+    public void addToIngredientsTab(Supplier<? extends ItemLike> item) {
+        addToTab(CreativeModeTabs.INGREDIENTS, item);
+    }
+
+    private void addToTab(ResourceKey<CreativeModeTab> creativeModeTab, Supplier<? extends ItemLike> item) {
+        if (event.getTabKey() == creativeModeTab) {
+            addItem(item);
         }
     }
 
-    public void addToCombatTab() {
-        if (event.getTab() == CreativeModeTabs.COMBAT) {
-            event.accept(MetallicsItems.BRONZE_PLATED_HELMET);
-            event.accept(MetallicsItems.BRONZE_PLATED_BOOTS);
-            event.accept(MetallicsItems.BRONZE_PLATED_CHESTPLATE);
-            event.accept(MetallicsItems.BRONZE_PLATED_LEGGINGS);
-            event.accept(MetallicsItems.BRONZE_PLATED_AXE);
-            event.accept(MetallicsItems.BRONZE_PLATED_SHOVEL);
-            event.accept(MetallicsItems.BRONZE_PLATED_PICKAXE);
-            event.accept(MetallicsItems.BRONZE_PLATED_HOE);
-            event.accept(MetallicsItems.BRONZE_PLATED_SWORD);
-        }
-    }
-
-    public void addToBuildingBlocksTab() {
-        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(MetallicsBlocks.TIN_ORE);
-            event.accept(MetallicsBlocks.DEEPSLATE_TIN_ORE);
-            event.accept(MetallicsBlocks.TIN_BLOCK);
-            event.accept(MetallicsBlocks.RAW_TIN_BLOCK);
-            event.accept(MetallicsBlocks.TIN_GLASS);
-            event.accept(MetallicsBlocks.TIN_GLASS_PANE);
-        }
-    }
-
-    public void addToFoodAndDrinksTab() {
-        if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(MetallicsItems.CANNED_BEETROOT);
-            event.accept(MetallicsItems.CANNED_CARROT);
-            event.accept(MetallicsItems.CANNED_MELON);
-        }
+    private void addItem(Supplier<? extends ItemLike> item) {
+        event.accept(item);
     }
 }
