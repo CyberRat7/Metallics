@@ -15,25 +15,20 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.EnumMap;
 import java.util.function.Supplier;
 
-
-
-
 public enum MetallicsArmorMaterials implements ArmorMaterial {
-    BRONZE("bronze", 25, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
-        p_266655_.put(ArmorItem.Type.BOOTS, 3);
-        p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
-        p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
-        p_266655_.put(ArmorItem.Type.HELMET, 3);
-    }), 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.05F, () -> {
-        return Ingredient.of(MetallicsItems.BRONZE_INGOT.get());
-    });
+    BRONZE("bronze", 25, Util.make(new EnumMap<>(ArmorItem.Type.class), (armor) -> {
+        armor.put(ArmorItem.Type.BOOTS, 3);
+        armor.put(ArmorItem.Type.LEGGINGS, 5);
+        armor.put(ArmorItem.Type.CHESTPLATE, 6);
+        armor.put(ArmorItem.Type.HELMET, 3);
+    }), 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.05F, () -> Ingredient.of(MetallicsItems.BRONZE_INGOT.get()));
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
-    private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {
-        p_266653_.put(ArmorItem.Type.BOOTS, 13);
-        p_266653_.put(ArmorItem.Type.LEGGINGS, 15);
-        p_266653_.put(ArmorItem.Type.CHESTPLATE, 16);
-        p_266653_.put(ArmorItem.Type.HELMET, 11);
+    private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (armor) -> {
+        armor.put(ArmorItem.Type.BOOTS, 13);
+        armor.put(ArmorItem.Type.LEGGINGS, 15);
+        armor.put(ArmorItem.Type.CHESTPLATE, 16);
+        armor.put(ArmorItem.Type.HELMET, 11);
     });
     private final String name;
     private final int durabilityMultiplier;
@@ -42,31 +37,25 @@ public enum MetallicsArmorMaterials implements ArmorMaterial {
     private final SoundEvent sound;
     private final float toughness;
     private final float knockbackResistance;
-
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-
-
-
-
-
-    private MetallicsArmorMaterials(String p_268171_, int p_268303_, EnumMap<ArmorItem.Type, Integer> p_267941_, int p_268086_, SoundEvent p_268145_, float p_268058_, float p_268180_, Supplier<Ingredient> p_268256_) {
-        this.name = p_268171_;
-        this.durabilityMultiplier = p_268303_;
-        this.protectionFunctionForType = p_267941_;
-        this.enchantmentValue = p_268086_;
-        this.sound = p_268145_;
-        this.toughness = p_268058_;
-        this.knockbackResistance = p_268180_;
-        this.repairIngredient = new LazyLoadedValue<>(p_268256_);
+    MetallicsArmorMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionFunctionForType, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+        this.name = name;
+        this.durabilityMultiplier = durabilityMultiplier;
+        this.protectionFunctionForType = protectionFunctionForType;
+        this.enchantmentValue = enchantmentValue;
+        this.sound = sound;
+        this.toughness = toughness;
+        this.knockbackResistance = knockbackResistance;
+        this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
     }
 
-    public int getDurabilityForType(ArmorItem.Type p_266745_) {
-        return HEALTH_FUNCTION_FOR_TYPE.get(p_266745_) * this.durabilityMultiplier;
+    public int getDurabilityForType(ArmorItem.Type armorType) {
+        return HEALTH_FUNCTION_FOR_TYPE.get(armorType) * this.durabilityMultiplier;
     }
 
-    public int getDefenseForType(ArmorItem.Type p_266752_) {
-        return this.protectionFunctionForType.get(p_266752_);
+    public int getDefenseForType(ArmorItem.Type armorType) {
+        return this.protectionFunctionForType.get(armorType);
     }
 
     public int getEnchantmentValue() {
