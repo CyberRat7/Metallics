@@ -1,0 +1,36 @@
+{
+  "item.metallics.tin_can": "Бляшанка",
+  "item.metallics.crushed_tin_can": "Іржава бляшанка",
+
+  "item.metallics.raw_tin": "Необроблене олово",
+  "item.metallics.tin_ingot": "Олов'яний злиток",
+  "item.metallics.tin_nugget": "Олов'яний самородок",
+
+  "item.metallics.bronze_ingot": "Бронзовий злиток",
+  "item.metallics.bronze_plated_helmet": "Бронзований залізний шолом",
+  "item.metallics.bronze_plated_boots": "Бронзовані залізні чоботи",
+  "item.metallics.bronze_plated_leggings": "Бронзовані залізні наголінники",
+  "item.metallics.bronze_plated_chestplate": "Бронзований залізний нагрудник",
+
+  "item.metallics.bronze_plated_axe": "Бронзована залізна сокира",
+  "item.metallics.bronze_plated_sword": "Бронзований залізний меч",
+  "item.metallics.bronze_plated_hoe": "Бронзована залізна мотика",
+  "item.metallics.bronze_plated_shovel": "Бронзована залізна лопата",
+  "item.metallics.bronze_plated_pickaxe": "Бронзоване залізне кайло",
+
+  "block.metallics.tin_block": "Блок олова",
+  "block.metallics.tin_glass": "Олов'яне посилене скло",
+  "block.metallics.tin_glass_pane": "Олов'яна посилена шиба",
+  "block.metallics.raw_tin_block": "Блок необробленого олова",
+  "block.metallics.tin_ore": "Олов'яна руда",
+  "block.metallics.deepslate_tin_ore": "Глибосланцева олов'яна руда",
+
+  "item.metallics.canned_carrot": "Консервована морква",
+  "item.metallics.canned_beetroot": "Консервований буряк",
+  "item.metallics.canned_melon": "Консервований кавун",
+
+  "advancements.bronze_age.title": "Бронзовий вік",
+  "advancements.bronze_age.description": "Покращте своє залізне спорядження за допомогою бронзи",
+  "advancements.shut_your_can.title": "Подовження строку придатності",
+  "advancements.shut_your_can.description": "Отримайте консервовану їжу"
+}
